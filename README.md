@@ -10,8 +10,8 @@ Functionalities -
 Making the project working - 
 1) npm install
 2) Run the server from index.js by "npm run server"
-3) Visit localhost:8080
+3) Visit http://localhost:8080
 
 WORKING ROUTES - 
-1) To view all posts - localhost:8080/posts
+1) To view all posts - http://localhost:8080/posts
 2) 
