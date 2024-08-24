@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const {v4:uuidv4} = require('uuid');
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
@@ -12,17 +13,17 @@ let port = 8080;
 
 let posts = [
     {
-        id:"1a",
+        id:uuidv4(),
         username: "Nikhil",
         content: "I have to workhard to achieve success"
     },
     {
-        id:"2b",
+        id:uuidv4(),
         username: "Monu",
         content: "I have to make my life better"
     },
     {
-        id:"3c",
+        id:uuidv4(),
         username: "Nikhil",
         content: "I have to make to myself satisfied"
     },
@@ -42,14 +43,15 @@ app.get('/posts/new',(req,res)=>{
 
 app.post('/posts',(req,res)=>{
     let {username,content} = req.body;
-    posts.push({username,content});
+    let id = uuidv4();
+    posts.push({id,username,content});
     res.redirect('/posts');
 })
 
 app.get('/posts/:id',(req,res)=>{
     let {id} = req.params;
     let post = posts.find(p=>id===p.id);
-    console.log(post);
+    // console.log(post);
     res.render('show.ejs',{post});
 })
 
