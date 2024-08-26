@@ -1,4 +1,4 @@
-This a Quora Page.
+This a Quora Page with CRUD operations.
 Created by using HTML, CSS, JS, Node, Express, EJS, REST APIs.
 
 Functionalities - 
