@@ -12,7 +12,7 @@
     <div class="post">
         <h3 class="user">@<%=post.username %></h3>
         <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
-            <textarea name="newContent" placeholder="Enter New Content"><%= post.content %></textarea><br><br>
+            <textarea rows="10" cols="35" name="newContent" placeholder="Enter New Content"><%= post.content %></textarea><br><br>
             <button type="submit">Submit</button>
         </form>
     </div>
