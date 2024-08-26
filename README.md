@@ -11,8 +11,6 @@ Functionalities -
 Making the project working - 
 1) npm install
 2) Run the server from index.js by "npm run server"
-3) Visit http://localhost:8080
+3) Visit http://localhost:8080/posts/
 
 Note:- After restarting server, Please reach back to /posts and refresh as all the ids of the posts will get changed because they are generating randomly on every server refresh as i have not used any DB.
-
-Entry Route - http://localhost:8080/posts/
